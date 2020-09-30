@@ -1,8 +1,8 @@
 /*
 * @Author: OctaveOliviers
-* @Date:   2020-09-27 18:05:24
+* @Date:   2020-09-30 18:56:39
 * @Last Modified by:   OctaveOliviers
-* @Last Modified time: 2020-09-29 13:46:07
+* @Last Modified time: 2020-09-30 20:57:46
 */
 // Copyright (c) 2014 The Chromium Authors. All rights reserved.
 // Use of this source code is governed by a BSD-style license that can be
@@ -247,8 +247,7 @@
         /**
          * For disabled instances, set up a snackbar with the disabled message.
          */
-        
-        : function () {
+        setupDisabledRunner: function () {
             this.containerEl = document.createElement('div');
             this.containerEl.className = Runner.classes.SNACKBAR;
             this.containerEl.textContent = loadTimeData.getValue('disabledEasterEgg');
