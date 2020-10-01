@@ -2,7 +2,7 @@
 # @Author: OctaveOliviers
 # @Date:   2020-09-27 18:34:00
 # @Last Modified by:   OctaveOliviers
-# @Last Modified time: 2020-10-01 12:57:35
+# @Last Modified time: 2020-10-01 14:33:04
 
 """
 Based on "Deep Q-Learning for Atari Breakout" form Jacob Chapman and Mathias Lechner
@@ -60,7 +60,8 @@ def create_q_model():
     inputs = layers.Input(shape=(84, 84, 4,))
 
     # Convolutions on the frames on the screen
-    layer1 = layers.Conv2D(32, 8, strides=4, activation="relu")(inputs)
+    pooled = layers.MaxPool2D(pool_size=(pool_sz, pool_sz))(inputs)
+    layer1 = layers.Conv2D(32, 8, strides=4, activation="relu")(pooled)
     layer2 = layers.Conv2D(64, 4, strides=2, activation="relu")(layer1)
     layer3 = layers.Conv2D(64, 3, strides=1, activation="relu")(layer2)
 
