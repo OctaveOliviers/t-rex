@@ -2,7 +2,7 @@
 # @Author: OctaveOliviers
 # @Date:   2020-09-27 18:34:00
 # @Last Modified by:   OctaveOliviers
-# @Last Modified time: 2020-09-29 13:46:09
+# @Last Modified time: 2020-10-01 12:57:35
 
 """
 Based on "Deep Q-Learning for Atari Breakout" form Jacob Chapman and Mathias Lechner
